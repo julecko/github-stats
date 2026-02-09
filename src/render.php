@@ -120,7 +120,7 @@ function render_svg(array $langs, int $langs_count): string
     }
 
     $svgHeight = $y + $padding['bottom'];
-    $svgWidth  = $rightTextX + 90 + $padding['right'];
+    $svgWidth  = $rightTextX + 60 + $padding['right'];
 
     $stroke = 2;
     $inset  = $stroke / 2;
