@@ -1,8 +1,8 @@
 <?php
 
-function load_env(string $path)
+function load_env(string $path): array
 {
-    if (!file_exists($path)) return;
+    if (!file_exists($path)) return [];
 
     foreach (file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
         $line = trim($line);

@@ -15,6 +15,8 @@ if (!$user) {
     exit('Missing ?user=');
 }
 
+$langs_count = $_GET['langs_count'] ?? 5;
+
 require __DIR__ . '/../src/github.php';
 require __DIR__ . '/../src/stats.php';
 require __DIR__ . '/../src/render.php';
@@ -22,7 +24,7 @@ require __DIR__ . '/../src/render.php';
 try {
     $raw   = fetch_languages($user, $config['github_token']);
     $langs = aggregate_languages($raw);
-    $svg   = render_svg($langs);
+    $svg   = render_svg($langs, $langs_count);
 } catch (Throwable $e) {
     http_response_code(500);
     echo "Error: " . $e->getMessage();
