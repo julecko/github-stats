@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^languages/?$ index.php [L,QSA]
