@@ -48,6 +48,7 @@ function render_svg(array $langs, int $langs_count): string
         'Shell'      => '#89e051',
         'Kotlin'     => '#a97bff',
         'Dart'       => '#00b4ab',
+        'Svelte'     => '#ff3e00',
     ];
 
     $fontStack = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
